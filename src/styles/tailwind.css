@@ -74,6 +74,32 @@
 	--sidebar-ring: oklch(0.439 0 0);
 }
 
+.catppuccin-mocha {
+	--background: #11111b; /* Crust */
+	--card: var(--background);
+	--popover: var(--background);
+	--primary-foreground: #181825;
+	--sidebar: var(--primary-foreground); /* Mantle */
+	--secondary: oklch(0.269 0 0);
+	--muted: #1e1e2e; /* Base */
+	--accent: var(--muted);
+	--border: var(--muted);
+	--input: var(--muted);
+	--sidebar-accent: var(--muted);
+	--sidebar-border: var(--muted);
+	--foreground: #cdd6f4; /* Text */
+	--card-foreground: var(--foreground);
+	--popover-foreground: var(--foreground);
+	--primary: var(--foreground);
+	--secondary-foreground: var(--foreground);
+	--accent-foreground: var(--foreground);
+	--sidebar-foreground: var(--foreground);
+	--sidebar-primary-foreground: var(--foreground);
+	--sidebar-accent-foreground: var(--foreground);
+	--destructive: #eba0ac /* Maroon */;
+	--destructive-foreground: #f38ba8 /* Red */;
+}
+
 @theme inline {
 	--color-background: var(--background);
 	--color-foreground: var(--foreground);
