@@ -51,8 +51,8 @@ const SidebarGroup: FC<PropsWithChildren & { label: string }> = ({ children, lab
 
 export const AppSidebar: FC = () => {
 	return (
-		<div className="bg-sidebar">
-			<ScrollArea className="h-[calc(100dvh-32px)]">
+		<div>
+			<ScrollArea className="h-[calc(100dvh-32px-1px)]">
 				<div className="flex flex-col gap-x-4 gap-y-2 p-4">
 					<SidebarGroup label="Fast Access">
 						{fast_access.map((item) => (

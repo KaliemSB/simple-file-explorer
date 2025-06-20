@@ -22,7 +22,7 @@ const ActionButton: FC<PropsWithChildren<ComponentProps<"button">>> = ({ childre
 
 export const TitleBar: FC = () => {
 	return (
-		<div data-tauri-drag-region className="col-span-2 bg-background flex justify-end items-center">
+		<div data-tauri-drag-region className="col-span-3 flex justify-end items-center">
 			<ActionButton onClick={() => appWindow.minimize()}>
 				<Minus size={16} strokeWidth={2} />
 			</ActionButton>
