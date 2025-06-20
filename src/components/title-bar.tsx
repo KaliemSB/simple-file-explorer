@@ -1,6 +1,9 @@
+import { getCurrentWindow } from "@tauri-apps/api/window";
 import { Maximize, Minus, X } from "lucide-react";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import { cn } from "@/lib/utils";
+
+const appWindow = getCurrentWindow();
 
 const ActionButton: FC<PropsWithChildren<ComponentProps<"button">>> = ({ children, className, ...props }) => {
 	return (
@@ -19,14 +22,17 @@ const ActionButton: FC<PropsWithChildren<ComponentProps<"button">>> = ({ childre
 
 export const TitleBar: FC = () => {
 	return (
-		<div className="col-span-2 bg-background flex justify-end items-center">
-			<ActionButton>
+		<div data-tauri-drag-region className="col-span-2 bg-background flex justify-end items-center">
+			<ActionButton onClick={() => appWindow.minimize()}>
 				<Minus size={16} strokeWidth={2} />
 			</ActionButton>
-			<ActionButton>
+			<ActionButton onClick={() => appWindow.toggleMaximize()}>
 				<Maximize size={16} strokeWidth={2} />
 			</ActionButton>
-			<ActionButton className="active:bg-destructive-foreground! hover:bg-destructive!">
+			<ActionButton
+				onClick={() => appWindow.close()}
+				className="active:bg-destructive-foreground! hover:bg-destructive!"
+			>
 				<X size={16} strokeWidth={2} />
 			</ActionButton>
 		</div>
