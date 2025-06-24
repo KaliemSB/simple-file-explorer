@@ -2,7 +2,6 @@ import { Download, HardDrive, House, Usb } from "lucide-react";
 import type { FC, PropsWithChildren, ReactNode } from "react";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
 const fast_access = [
 	{
