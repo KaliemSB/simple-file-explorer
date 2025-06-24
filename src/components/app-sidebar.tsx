@@ -53,7 +53,7 @@ export const AppSidebar: FC = () => {
 	return (
 		<div>
 			<ScrollArea className="h-[calc(100dvh-32px-1px)]">
-				<div className="flex flex-col gap-x-4 gap-y-2 p-4">
+				<div className="flex flex-col p-2 gap-2">
 					<SidebarGroup label="Fast Access">
 						{fast_access.map((item) => (
 							<SidebarButton icon={item.icon} key={item.label}>

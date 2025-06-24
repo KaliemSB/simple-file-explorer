@@ -4,6 +4,7 @@ import { Separator } from "@/components/ui/separator";
 import "@/styles/tailwind.css";
 import React, { type FC } from "react";
 import ReactDOM from "react-dom/client";
+import { Navbar } from "@/components/navbar";
 
 const App: FC = () => {
 	return (
@@ -13,7 +14,10 @@ const App: FC = () => {
 				<Separator className="col-span-3" />
 				<AppSidebar />
 				<Separator orientation="vertical" />
-				<div></div>
+				<div>
+					<Navbar />
+					<Separator />
+				</div>
 			</main>
 		</React.StrictMode>
 	);
