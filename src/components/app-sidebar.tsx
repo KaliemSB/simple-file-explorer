@@ -24,19 +24,10 @@ const external_media = ["SanDisk Cruzer Blade 16GB", "KINGSTON SE9 G2 128GB", "P
 
 const SidebarButton: FC<PropsWithChildren & { icon: ReactNode }> = ({ children, icon }) => {
 	return (
-		<Tooltip>
-			<TooltipTrigger asChild>
-				<div>
-					<Button className="w-full justify-start!" size="sm" variant="outline">
-						{icon}
-						<p className="truncate">{children}</p>
-					</Button>
-				</div>
-			</TooltipTrigger>
-			<TooltipContent>
-				<p>{children}</p>
-			</TooltipContent>
-		</Tooltip>
+		<Button className="w-full justify-start!" size="sm" variant="outline">
+			{icon}
+			<p className="truncate">{children}</p>
+		</Button>
 	);
 };
 
